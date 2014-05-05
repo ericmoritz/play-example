@@ -11,15 +11,12 @@ RUN chmod a+x /opt/play/play
 RUN chmod a+x /opt/play/framework/build
 ENV HOME /root/
 RUN echo "export PATH=$PATH:/opt/play" >> ~/.bashrc
-RUN /opt/play/play help
-
 
 ###################################################################
 ## Application prereqs
 ###################################################################
 EXPOSE 9000
 ADD ./todolist /src
-RUN cd /src && /opt/play/play compile
 
 CMD cd /src && /opt/play/play -DapplyEvolutions.default=true start
 
