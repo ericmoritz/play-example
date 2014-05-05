@@ -17,6 +17,6 @@ RUN echo "export PATH=$PATH:/opt/play" >> ~/.bashrc
 ###################################################################
 EXPOSE 9000
 ADD ./todolist /src
-
-CMD cd /src && /opt/play/play -DapplyEvolutions.default=true start
+ADD ./docker/run.sh /src/run.sh
+CMD /src/run.sh
 
