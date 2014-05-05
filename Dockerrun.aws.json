@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "ericmoritz/play-example",
+    "Name": "ericmoritz/todolist",
     "Update": "true"
   },
   "Ports": [
