@@ -1,5 +1,9 @@
 {
   "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "ericmoritz/play-example",
+    "Update": "true"
+  },
   "Ports": [
     {
       "ContainerPort": "9000"
