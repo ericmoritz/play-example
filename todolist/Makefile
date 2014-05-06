@@ -1,0 +1,2 @@
+all:
+	play compile

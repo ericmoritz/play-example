@@ -15,8 +15,12 @@ RUN echo "export PATH=$PATH:/opt/play" >> ~/.bashrc
 ###################################################################
 ## Application prereqs
 ###################################################################
-EXPOSE 9000
 ADD ./todolist /src
 ADD ./docker/run.sh /src/run.sh
+RUN apt-get install -y make
+ENV PATH $PATH:/opt/play
+RUN make -C /src
+
+EXPOSE 9000
 CMD /src/run.sh
 
